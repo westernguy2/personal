@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <title>Kunal Agarwal</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
+        <![endif]-->
+        <!--[if gt IE 8]><!-->
+            <link rel="stylesheet" href="{% static 'css/layouts/marketing.css' %}">
+        <!--<![endif]-->
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="">Kunal</a>
+
+        <ul class="pure-menu-list">
+            
+            <li class="pure-menu-item"><a href="{% url '61a' %}" class="pure-menu-link">CS 61A</a></li>
+        </ul>
+    </div>
+</div>
+
+  <div class="splash-container">
+    <div class="splash">
+        
+        
+        <p>
+            <a href="https://www.linkedin.com/in/kagarwal2/" class="pure-button pure-button-primary">Linkedin</a>
+            <a href="{% static 'Kunal-Agarwal.pdf' %}" class="pure-button pure-button-primary">Resume</a>
+            
+
+        </p>
+        <p>
+            <a href="{% url '61a' %}" class="pure-button pure-button-primary">CS 61A</a>
+        </p>
+    </div>
+</div>
+
+
+    <div class="footer l-box is-center">
+        © Kunal Agarwal {% now "Y" %}
+    </div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

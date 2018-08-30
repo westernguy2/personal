@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+import worksheets.views
+from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('cs61a/', worksheets.views.cs61a, name = '61a'), 
+    path('', views.home, name = 'home'), 
+    path('pick_topics/', worksheets.views.which_worksheets, name = 'pick_topics'),
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

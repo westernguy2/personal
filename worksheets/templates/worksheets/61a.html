@@ -49,13 +49,16 @@
   <div class="splash-container">
     <div class="splash">
         
-        
+        {% for w in wkshts %}
         <p>
-            <a href="https://www.linkedin.com/in/kagarwal2/" class="pure-button pure-button-primary">Linkedin</a>
-            <a href="{% static 'Kunal-Agarwal.pdf' %}" class="pure-button pure-button-primary">Resume</a>
+
+            <a href="https://www.linkedin.com/in/kagarwal2/" class="pure-button pure-button-primary">{{ w[0].name }}</a>
+            <a href="{% static 'Kunal-Agarwal.pdf' %}" class="pure-button pure-button-primary">{{ w[1].name }}</a>
             
 
         </p>
+        {% endfor %}
+
         <p>
             <a href="{% url '61a' %}" class="pure-button pure-button-primary">CS 61A</a>
         </p>

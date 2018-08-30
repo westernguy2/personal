@@ -51,11 +51,10 @@
         
         {% for w in wkshts %}
         <p>
-
-            <a href="https://www.linkedin.com/in/kagarwal2/" class="pure-button pure-button-primary">{{ w[0].name }}</a>
-            <a href="{% static 'Kunal-Agarwal.pdf' %}" class="pure-button pure-button-primary">{{ w[1].name }}</a>
+          {% for k in w %}
+            <a href="{% static 'Kunal-Agarwal.pdf' %}" class="pure-button pure-button-primary">{{ k.name }}</a>
             
-
+            {% endfor %}
         </p>
         {% endfor %}
 

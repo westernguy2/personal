@@ -6,7 +6,7 @@ class Worksheet(models.Model):
 	file = models.FileField(upload_to = 'worksheets/')
 	isSolution = models.BooleanField()
 	worksheetNumber = models.IntegerField()
-	variablesAndFunctions = models.BooleanField()
+	variablesAndFunctions = models.BooleanField() 
 	controls = models.BooleanField()
 	wwpd = models.BooleanField()
 	environmentDiagrams = models.BooleanField()

@@ -37,7 +37,7 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Kunal</a>
+        <a class="pure-menu-heading" href="{% url 'home' %}">Kunal</a>
 
         <ul class="pure-menu-list">
             
@@ -46,23 +46,26 @@
     </div>
 </div>
 
-  <div class="splash-container">
+  
     <div class="splash">
-        
         {% for w in wkshts %}
         <p>
           {% for k in w %}
-            <a href="{% static 'Kunal-Agarwal.pdf' %}" class="pure-button pure-button-primary">{{ k.name }}</a>
-            
+            <a href="{{ k.file.url }}" class="pure-button pure-button-secondary">{{ k.name }}</a>
             {% endfor %}
         </p>
         {% endfor %}
 
         <p>
-            <a href="{% url '61a' %}" class="pure-button pure-button-primary">CS 61A</a>
+            <a href="{% url 'pick_topics' %}" class="pure-button pure-button-secondary">Try Another Topic</a>
         </p>
+        <br/>
+    <br/>
+    <br/>
+    <br/>
     </div>
-</div>
+
+
 
 
     <div class="footer l-box is-center">

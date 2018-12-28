@@ -24,16 +24,50 @@
         <!--[if gt IE 8]><!-->
             <link rel="stylesheet" href="{% static 'css/layouts/marketing.css' %}">
         <!--<![endif]-->
+<style>
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+
 </head>
 <body>
-
-
-
-
-
-
-
-
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
@@ -64,33 +98,100 @@
 
 <div class="content-wrapper">
 
-    <!--<div class="content">
-        <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
+    <div class="content">
+        <h2 class="content-head is-center">Projects</h2>
 
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
 
                 <h3 class="content-subhead">
-                    <i class="fa fa-rocket"></i>
-                    Get Started Quickly
+                    Amazons (Artificial Intelligence)
                 </h3>
                 <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    Artificial Intelligence for a game similar to checkers that placed in the top five in a class of almost 1000.
                 </p>
+
+                <button id="myBtn">Learn More</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+
+                </div>
+
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
-                    <i class="fa fa-mobile"></i>
-                    Responsive Layouts
+                    Graph API and Trip-finder
                 </h3>
                 <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                    Created an API for a graph package which includes a general traversal algorithm and a shortest path algorithm. This was used to create a trip finder similar to Google Maps.
                 </p>
+
+                <button id="myBtn">Learn More</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    Personal Website and Teaching Materials
+                </h3>
+                <p>
+                    This website! A web application that helps students access worksheets based on the topic they need assistance in. Also included are worksheets I designed to help teach students certain introductory computer science concepts.
+                </p>
+
+                <button id="myBtn">Learn More</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    Scheme Interpreter
+                </h3>
+                <p>
+                    An interpreter built for Scheme, a dialect of Lisp, using Python. Can handle tail contexts and macros. 
+                </p>
+
+                <button id="myBtn">Learn More</button>
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Some text in the Modal..</p>
+                    </div>
+
+                </div>
             </div>
             
             
         </div>
-    </div>-->
+    </div>
 
     <div class="ribbon l-box-lrg pure-g">
 
@@ -102,11 +203,11 @@
             <h2 class="content-head content-head-ribbon">About Me</h2>
 
             <p>
-                Hi! I'm Kunal Agarwal, a computer science student from the Bay Area. I am a student at UC Berkeley double majoring in Computer Science and Data Science. 
+                Hi! I'm Kunal Agarwal, a computer science student from the Bay Area looking for an internship opportunity for this summer. I am a student at UC Berkeley double majoring in Computer Science and Applied Mathematics. 
             </p>
-            <p>
+            <!--<p>
                 I am also enthusiastic about teaching computer science! After taking CS 61A, I helped give back to the course by academic interning and 1 on 1 tutoring. I found the ability to assist other students the most fulfilling way to make use of my expertise in the material, and tutoring and assisting in labs allowed me to understand the material from a new multiplicity of perspectives when I considered how I could best convey concepts to each individual student. 
-            </p>
+            </p>-->
         </div>
     </div>
 
@@ -125,6 +226,33 @@
 </div>
 
 
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 
 
 </body>

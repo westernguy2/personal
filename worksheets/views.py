@@ -20,3 +20,5 @@ def cs61a(request):
 
 def which_worksheets(request):
 	return render(request, 'worksheets/pick_topic.html')
+def my_own_worksheets(request):
+	return render(request, 'worksheets/my_worksheets.html')

@@ -25,4 +25,5 @@ urlpatterns = [
     path('cs61a/', worksheets.views.cs61a, name = '61a'), 
     path('', views.home, name = 'home'), 
     path('pick_topics/', worksheets.views.which_worksheets, name = 'pick_topics'),
+    path('my_worksheets/', worksheets.views.my_own_worksheets, name = 'my_worksheets')
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

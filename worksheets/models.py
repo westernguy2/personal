@@ -1,9 +1,12 @@
 from django.db import models
+from django.core.exceptions import ObjectDoesNotExist
+import os
+from worksheets.storage import OverwriteStorage
 
 # Create your models here.
 class Worksheet(models.Model):
 	name = models.CharField(max_length=100)
-	file = models.FileField(upload_to = 'worksheets/')
+	file = models.FileField(max_length=100, storage=OverwriteStorage(), upload_to = 'worksheets/')
 	isSolution = models.BooleanField()
 	worksheetNumber = models.IntegerField()
 	variablesAndFunctions = models.BooleanField() 

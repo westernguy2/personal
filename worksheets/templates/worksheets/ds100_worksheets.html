@@ -45,24 +45,17 @@
         </ul>
     </div>
 </div>
-
+	
+	
   
     <div class="splash">
-        {% for w in wkshts %}
-        <p>
-          {% for k in w %}
-            <a href="{{ k.file.url }}" class="pure-button pure-button-secondary">{{ k.name }}</a>
-            {% endfor %}
-        </p>
-        {% endfor %}
+    	<p>
+            <a href="" class="pure-button pure-button-secondary">Discussion 2</a>
+            <a href="" class="pure-button pure-button-secondary">Discussion 2 Solutions</a>
 
-        <p>
-            <a href="{% url 'pick_topics' %}" class="pure-button pure-button-secondary">Try Another Topic</a>
         </p>
-        <br/>
-    <br/>
-    <br/>
-    <br/>
+        <!-- {% static 'Worksheet_1.pdf' %} -->
+        
     </div>
 
 

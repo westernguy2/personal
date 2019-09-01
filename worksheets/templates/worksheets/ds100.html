@@ -46,26 +46,22 @@
     </div>
 </div>
 
-  
+  <div class="splash-container">
     <div class="splash">
-        {% for w in wkshts %}
-        <p>
-          {% for k in w %}
-            <a href="{{ k.file.url }}" class="pure-button pure-button-secondary">{{ k.name }}</a>
-            {% endfor %}
-        </p>
-        {% endfor %}
+     
+    <h1 class="splash-head">Welcome to Data 100</h1>
+    <h2 class="splash-subhead"> Lab: Monday | 9am-10am | Cory 105</h2>
+    <h2 class="splash-subhead"> Discussion: Wednesday | 3pm-4pm | Dwinelle 283</h2>
+    <h2 class="splash-subhead"> Office Hours: Thursday | 4pm-5pm | Evans 426</h2>
+    <p>
+            <a href="http://www.ds100.org/fa19/" class="pure-button pure-button-primary">Class Website</a>
+            <a href="{% url 'ds100_worksheets' %}" class="pure-button pure-button-primary">Discussion Worksheets</a>
+            
 
-        <p>
-            <a href="{% url 'pick_topics' %}" class="pure-button pure-button-secondary">Try Another Topic</a>
         </p>
-        <br/>
-    <br/>
-    <br/>
-    <br/>
+
     </div>
-
-
+</div>
 
 
     <div class="footer l-box is-center">

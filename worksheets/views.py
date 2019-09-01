@@ -22,3 +22,7 @@ def which_worksheets(request):
 	return render(request, 'worksheets/pick_topic.html')
 def my_own_worksheets(request):
 	return render(request, 'worksheets/my_worksheets.html')
+def ds100(request):
+	return render(request, 'worksheets/ds100.html')
+def ds100_worksheets(request):
+	return render(request, 'worksheets/ds100_worksheets.html')
